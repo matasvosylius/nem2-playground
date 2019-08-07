@@ -1,7 +1,8 @@
 import '../utils/env-config'
 import {BlockHttp} from 'nem2-sdk';
 
-const blockHttp = new BlockHttp(process.env.REST_SERVER + ':' + process.env.PORT);
+const url = process.env.REST_SERVER as string;
+const blockHttp = new BlockHttp(url);
 const height = 1;
 
 blockHttp

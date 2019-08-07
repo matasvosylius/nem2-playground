@@ -1,6 +1,7 @@
 import {ChainHttp} from 'nem2-sdk';
 
-const chainhttp = new ChainHttp(process.env.REST_SERVER + ':' + process.env.PORT);
+const url = process.env.REST_SERVER as string
+const chainhttp = new ChainHttp(url);
 
 chainhttp 
     .getBlockchainHeight()        
